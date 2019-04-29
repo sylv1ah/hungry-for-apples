@@ -1,0 +1,27 @@
+{
+  "name": "hungry-for-apples",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seabasshoang/hungry-for-apples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seabasshoang/hungry-for-apples/issues"
+  },
+  "homepage": "https://github.com/seabasshoang/hungry-for-apples#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "morgan": "^1.9.1",
+    "pg": "^7.10.0",
+    "serve-favicon": "^2.5.0"
+  }
+}
