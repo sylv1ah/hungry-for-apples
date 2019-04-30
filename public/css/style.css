@@ -4,12 +4,21 @@ body {
     width: 100vw;
 }
 
-h1 {
+a {
+    text-decoration: none;
+    color: red;
+    cursor: pointer;
+}
+
+.title {
     color: red;
     font-family: 'roiland';
+    font-size: 3rem;
     text-align: center;
     text-shadow: 0 0 10px #FFFFFF;
     margin: 40px;
+    cursor: pointer;
+    user-select: none;
 }
 
 h2 {
@@ -24,10 +33,13 @@ form {
     flex-direction: column;
     background-color: #E7E0DB;
     width: 300px;
-    height: 400px;
+    height: 430px;
     margin: auto;
     border-radius: 2% 2% 10% 10%;
     color: white;
+    -webkit-box-shadow:-5px -8px 19px 5px #858585 inset;
+-moz-box-shadow:-5px -8px 19px 5px #858585 inset;
+box-shadow:-5px -8px 19px 5px #858585 inset;
 }
 
 #search-character {
@@ -54,10 +66,23 @@ form {
 
 .orb {
     background-color: #8bcf21;
+    background-image: url('../assets/orb.png');
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 50px;
+    margin: 40px;
+    -webkit-box-shadow:0px 0px 23px 17px #18f8b4 ,0px 0px 16px 19px #18f8b4 inset;
+-moz-box-shadow:0px 0px 23px 17px #18f8b4 ,0px 0px 16px 19px #18f8b4 inset;
+box-shadow:0px 0px 23px 17px #18f8b4 ,0px 0px 16px 19px #18f8b4 inset;
+    animation: rotation 15s infinite linear;
+}
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
 }
 
 /* submit button styling */
@@ -71,7 +96,7 @@ form {
     user-select: none;
     transition: all 0.2s ease;
   }
-  .submit {
+  .btnsubmit {
     background: #b7de01;
     box-shadow: 0px 10px  rgb(71, 71, 71);
     color: #687e00;
@@ -80,18 +105,18 @@ form {
     height: 100px;
     border-radius: 50%;
   }
-  .submit:hover {
+  .btnsubmit:hover {
     background: #99ba01;
     box-shadow: 0px 10px rgb(71, 71, 71);
     color: #687e00;
   }
   /* Imitate a pressed effect for buttons */
-  .submit:active {
+  .btnsubmit:active {
     box-shadow: 0px 0px  rgb(71, 71, 71);
     top: 4px;
     
   }
-  .submit:focus {
+  .btnsubmit:focus {
     outline: none;
   }
 
@@ -101,12 +126,16 @@ form {
     background-color: #E7E0DB;
     margin: auto;
     border-radius: 0 0 40% 40%;
+    -webkit-box-shadow:-13px -1px 19px 17px #858585 inset;
+-moz-box-shadow:-13px -1px 19px 17px #858585 inset;
+box-shadow:-13px -1px 19px 17px #858585 inset;
   }
 /* css for characters page */
 
 .outer-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .container {
     width: 300px;
@@ -128,7 +157,7 @@ form {
   .charName {
     font-size: 2.5rem;
     font-family: 'roiland';
-    text-shadow: 0 0 20px #3d373c;
+    text-shadow: 3px 3px 1px #2f2a2f;
     color: #8BCF21;
     z-index: 5;
     width: 300px;
@@ -167,6 +196,11 @@ form {
         width: 300px;
         word-wrap: break-word;
         font-family: 'Share Tech Mono', monospace;
+        text-shadow: 2px 2px 1px #000000;
+    }
+    b {
+        background-color: red;
+        font-weight: bolder;
     }
 
     @font-face {
