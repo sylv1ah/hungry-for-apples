@@ -1,0 +1,18 @@
+<div class="character-list-container">
+   <h2>searching for...</h2>
+   <div id="user-search" class="user-search">
+       {{!-- user's search input will go here --}}
+       
+   </div>
+   {{#each char}}
+   <div class="character-list">
+        {{!-- character list of search query will append here --}}
+        <ul>
+            <img src={{image}} alt={{name}}>
+            <li>Name:{{name}}</li>
+            <li>Species:{{species}}</li>
+            <li>Appears in:{{episode}}</li>
+        </ul>
+   </div>
+   {{/each}}
+</div>
