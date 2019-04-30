@@ -4,15 +4,27 @@
        {{!-- user's search input will go here --}}
        
    </div>
-   {{#each char}}
-   <div class="character-list">
-        {{!-- character list of search query will append here --}}
-        <ul>
-            <img src={{image}} alt={{name}}>
-            <li>Name:{{name}}</li>
-            <li>Species:{{species}}</li>
-            <li>Appears in:{{episode}}</li>
-        </ul>
-   </div>
+   
+    <section class="outer-container">
+        {{#each char}}
+        <div class="mid-outer-container">
+            <div class="container">
+            <div class="charName">{{name}}</div> 
+                <div class="portal-container"> 
+                    <img class="portal" src="assets/portal3.png">
+                    <img class="jerry" src="{{image}}">
+                <div class="shadow"></div>
+                </div>  
+            </div>
+            <div class="info-container">
+                <ul>
+                    <li>Species:{{species}}</li>
+                    <li>Appears in:{{episode}}</li>
+                </ul>
+            </div>
+            
+        </div>
+        
    {{/each}}
+    </section>
 </div>

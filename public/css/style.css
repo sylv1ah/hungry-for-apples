@@ -1,3 +1,175 @@
+body {
+    background-image: url('../assets/galaxy.jpg') ;
+    color: white;
+    width: 100vw;
+}
+
 h1 {
     color: red;
+    font-family: 'roiland';
+    text-align: center;
+    text-shadow: 0 0 10px #FFFFFF;
+    margin: 40px;
 }
+
+h2 {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: normal;
+}
+/* css for homepage */
+
+form {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #E7E0DB;
+    width: 300px;
+    height: 400px;
+    margin: auto;
+    border-radius: 2% 2% 10% 10%;
+    color: white;
+}
+
+#search-character {
+    width: 200px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    margin: 10px;
+    background-color: red;
+    height: 48px;
+    color: white;
+    -webkit-box-shadow: 0 0 5px #666 inset;
+    -moz-box-shadow: 0 0 5px #666 inset;
+    box-shadow: 0 0 10px #666 inset;
+}
+
+#search-button {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgb(117, 117, 117);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.orb {
+    background-color: #8bcf21;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 50px;
+}
+
+/* submit button styling */
+.btn {
+    float: left;
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    color: #888;
+    text-align: center;
+    user-select: none;
+    transition: all 0.2s ease;
+  }
+  .submit {
+    background: #b7de01;
+    box-shadow: 0px 10px  rgb(71, 71, 71);
+    color: #687e00;
+    line-height: 50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  .submit:hover {
+    background: #99ba01;
+    box-shadow: 0px 10px rgb(71, 71, 71);
+    color: #687e00;
+  }
+  /* Imitate a pressed effect for buttons */
+  .submit:active {
+    box-shadow: 0px 0px  rgb(71, 71, 71);
+    top: 4px;
+    
+  }
+  .submit:focus {
+    outline: none;
+  }
+
+  .form-handle{
+    width: 100px;
+    height: 150px;
+    background-color: #E7E0DB;
+    margin: auto;
+    border-radius: 0 0 40% 40%;
+  }
+/* css for characters page */
+
+.outer-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .container {
+    width: 300px;
+    margin: 30px;
+    text-align: center;
+    display: flex;
+  /*   justify-content: center; */
+    
+  }
+  .portal-container {
+    width:300px;
+    height: 300px;
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .charName {
+    font-size: 2.5rem;
+    font-family: 'roiland';
+    text-shadow: 0 0 20px #3d373c;
+    color: #8BCF21;
+    z-index: 5;
+    width: 300px;
+    position: absolute;
+  }
+  .portal {
+    position: absolute;
+    width: 300px;
+    z-index: 1;
+  }
+  
+  .jerry {
+    position: absolute;
+    width: 200px;
+    z-index: 3;
+    border-radius: 50%;
+  /*   border: 5px solid #5fad4d; */
+  -webkit-box-shadow:0px 0px 19px 24px #5fad4d inset,0px 0px 21px 26px #5fad4d ;
+  -moz-box-shadow:0px 0px 19px 24px #5fad4d inset,0px 0px 21px 26px #5fad4d ;
+  box-shadow:0px 0px 19px 24px #5fad4d inset,0px 0px 21px 26px #5fad4d ;
+  }
+  
+  .shadow {
+    border-radius: 50%;
+      position: absolute;
+      box-shadow:
+        15px 45px 60px 0 #5fad4d inset,
+        -15px -45px 90px 0 #5fad4d inset;
+      width: 200px;
+      height: 200px; 
+      z-index:4;
+      
+    }
+
+    .info-container {
+        width: 300px;
+        word-wrap: break-word;
+        font-family: 'Share Tech Mono', monospace;
+    }
+
+    @font-face {
+        font-family: 'roiland';
+        src: url('../assets/Calligraphr-Regular.ttf')  format('truetype')
+      }
