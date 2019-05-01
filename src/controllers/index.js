@@ -19,7 +19,7 @@ router.get('/:character', (req, response) => {
     const url = `https://rickandmortyapi.com/api/character/?name=${characterQuery}`
     request(url, (error, res) => {
         // console.log("this is the response of get:",res.results.map(ep => ep.episode));
-        const episodeReq = res.results.map(ep => ep.episode);
+        // const episodeReq = res.results.map(ep => ep.episode);
         // console.log("this is episodeReq:" ,episodeReq);
 
         if(error) console.log(error);

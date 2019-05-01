@@ -148,7 +148,7 @@ box-shadow:0px 0px 23px 17px #18f8b4 ,0px 0px 16px 19px #18f8b4 inset;
     border-radius: 0 0 40% 40%;
     -webkit-box-shadow:-13px -1px 19px 17px #858585 inset;
 -moz-box-shadow:-13px -1px 19px 17px #858585 inset;
-box-shadow:-13px -1px 19px 17px #858585 inset;
+box-shadow:-13px -1px 39px 7px #858585 inset;
   }
 /* css for characters page */
 
@@ -234,7 +234,7 @@ box-shadow:-13px -1px 19px 17px #858585 inset;
     font-size: 40px;
     text-align: center;
     color: red;
-    margin: 20px;
+    margin: 50px;
     text-shadow: 0 0 10px #FFFFFF;
     user-select: none;
 }
@@ -252,6 +252,28 @@ box-shadow:-13px -1px 19px 17px #858585 inset;
 }
 .heart {
     color: red;
+}
+
+#myVideo {
+    margin: auto;
+    align-items: center;
+    display: block;
+    width: 80vw;
+    margin-top: 70px;
+}
+
+.error-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.error-title {
+    font-family: 'roiland';
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
 /* --------------------------------css for responsive desktop-------------------------------------- */
