@@ -1,13 +1,14 @@
 body {
     background-image: url('../assets/galaxy.jpg') ;
+    background-attachment: fixed;
     color: white;
     width: 100vw;
 }
 
 a {
     text-decoration: none;
-    color: red;
     cursor: pointer;
+    color: inherit;
 }
 
 .title {
@@ -17,13 +18,13 @@ a {
     text-align: center;
     text-shadow: 0 0 10px #FFFFFF;
     margin: 40px;
-    cursor: pointer;
     user-select: none;
 }
 
 h2 {
     font-family: 'Share Tech Mono', monospace;
     font-weight: normal;
+    text-shadow: 2px 2px 1px #000000;
 }
 /* css for homepage */
 
@@ -45,15 +46,21 @@ box-shadow:-5px -8px 19px 5px #858585 inset;
 #search-character {
     width: 200px;
     font-family: 'Share Tech Mono', monospace;
-    font-size: 15px;
+    font-size: 30px;
     margin: 10px;
     background-color: red;
     height: 48px;
     color: white;
     -webkit-box-shadow: 0 0 5px #666 inset;
     -moz-box-shadow: 0 0 5px #666 inset;
-    box-shadow: 0 0 10px #666 inset;
+    box-shadow: 2px 2px 15px #666 inset;
 }
+
+::placeholder {
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+  }
 
 #search-button {
     width: 80px;
@@ -148,7 +155,7 @@ box-shadow:-13px -1px 19px 17px #858585 inset;
   .portal-container {
     width:300px;
     height: 300px;
-    margin-top: 40px;
+    margin-top: 90px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,3 +214,28 @@ box-shadow:-13px -1px 19px 17px #858585 inset;
         font-family: 'roiland';
         src: url('../assets/Calligraphr-Regular.ttf')  format('truetype')
       }
+
+
+.search-again {
+    font-family: 'roiland';
+    font-size: 40px;
+    text-align: center;
+    color: red;
+    margin: 20px;
+    text-shadow: 0 0 10px #FFFFFF;
+    user-select: none;
+}
+
+/* footer styling */
+
+.footer {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    text-align: center;
+    word-wrap: none;
+    margin: 5px;
+    bottom:0;
+}
+.heart {
+    color: red;
+}
