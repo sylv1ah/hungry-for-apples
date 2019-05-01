@@ -17,7 +17,6 @@ router.get('/:character', (req, response) => {
     const characterQuery = req.url.split('/')[1];
     console.log("characterQuery:",characterQuery)
     const url = `https://rickandmortyapi.com/api/character/?name=${characterQuery}`
-    console.log(url);
     request(url, (error, res) => {
         // console.log("this is the response of get:",res.results.map(ep => ep.episode));
         const episodeReq = res.results.map(ep => ep.episode);
@@ -30,20 +29,21 @@ router.get('/:character', (req, response) => {
             .status(404)
             .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
         } else {
-            const nestedEpReq = episodeReq.map(nested => nested.map(epz => request(epz, (err1, res1) => {
+            // const nestedEpReq = episodeReq.map(nested => nested.map(epz => request(epz, (err1, res1) => {
                 
-                if(err1) console.log(err1);
-                if(res1.err1){
-                    console.log("nestedEpReq error!")
-                    response
-                    .status(404)
-                    .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
-                } else {
-                    console.log(res1);
+            //     if(err1) console.log(err1);
+            //     if(res1.err1){
+            //         console.log("nestedEpReq error!")
+            //         response
+            //         .status(404)
+            //         .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
+            //     } else {
+            //         console.log(res1);
                     
-                }
-            })));
-            console.log("this is nestedEpReq:" ,nestedEpReq);
+            //     }
+            // })));
+            // console.log("this is nestedEpReq:" ,nestedEpReq);
+
             response.render('characters', {char: res.results, search: req.url.split('/')[1]})
         }
     })
