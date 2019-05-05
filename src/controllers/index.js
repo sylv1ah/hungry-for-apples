@@ -29,6 +29,7 @@ router.get('/:character', (req, response) => {
             .status(404)
             .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
         } else {
+            
             // const nestedEpReq = episodeReq.map(nested => nested.map(epz => request(epz, (err1, res1) => {
                 
             //     if(err1) console.log(err1);
@@ -48,5 +49,18 @@ router.get('/:character', (req, response) => {
         }
     })
 });
+
+router.use(((req, res) => {
+    res
+    .status(400)
+    .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
+}))
+
+router.use((err, req, res) => {
+    console.log(err)
+    res
+    .status(500)
+    .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '500.html'))
+})
 
 module.exports = router;
