@@ -1,7 +1,10 @@
 const express = require('express');
 const path = require ('path');
-const request = require('../scripts/request');
+const fs = require('fs');
+const request = require('./request');
 const router = express.Router();
+
+const sortEpisodes = require('../scripts/sortEpisodes');
 
 router.get('/', (req, res) => {
     res.render('home')
@@ -18,9 +21,6 @@ router.get('/:character', (req, response) => {
     console.log("characterQuery:",characterQuery)
     const url = `https://rickandmortyapi.com/api/character/?name=${characterQuery}`
     request(url, (error, res) => {
-        // console.log("this is the response of get:",res.results.map(ep => ep.episode));
-        // const episodeReq = res.results.map(ep => ep.episode);
-        // console.log("this is episodeReq:" ,episodeReq);
 
         if(error) console.log(error);
         if(res.error){
@@ -29,23 +29,24 @@ router.get('/:character', (req, response) => {
             .status(404)
             .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
         } else {
+            request('https://rickandmortyapi.com/api/episode/', (err, result1) => {
+                if(err) {
+                    console.log(err);
+                } else {
+                    request('https://rickandmortyapi.com/api/episode/?page=2', (err1, result2) => {
+                        if(err1) {
+                            console.log(err1)
+                        } else {
+                            const allEps = (result1.results).concat(result2.results);
+                            const allEpsSorted = sortEpisodes(allEps);
+                            // console.log("allEpsSorted>>>>>>>>>>",allEpsSorted)
+                            fs.writeFileSync('src/allEpisodes.json', JSON.stringify(allEpsSorted))
+                            response.render('characters', {char: res.results, search: req.url.split('/')[1], allEps: allEpsSorted})
+                        }
+                    })
+                }
+            })
             
-            // const nestedEpReq = episodeReq.map(nested => nested.map(epz => request(epz, (err1, res1) => {
-                
-            //     if(err1) console.log(err1);
-            //     if(res1.err1){
-            //         console.log("nestedEpReq error!")
-            //         response
-            //         .status(404)
-            //         .sendFile(path.join(__dirname, '..', '..', 'public', 'html', '404.html'))
-            //     } else {
-            //         console.log(res1);
-                    
-            //     }
-            // })));
-            // console.log("this is nestedEpReq:" ,nestedEpReq);
-
-            response.render('characters', {char: res.results, search: req.url.split('/')[1]})
         }
     })
 });

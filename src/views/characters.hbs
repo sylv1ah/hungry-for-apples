@@ -20,7 +20,14 @@
                 <ul>
                     <li><b>Species:</b> {{species}}</li>
                     <li><b>Location:</b> {{location.name}}</li>
-                    <li><b>Episodes:</b> {{episode}}</li>
+                    <li><b>Origin:</b> {{origin.name}}</li>
+                    <li><b>Episodes:</b> 
+                        <ul>
+                            {{#each episode}}
+                            <li>{{epMatch this}}</li>
+                            {{/each}}
+                        </ul>
+                    </li>
                 </ul>
             </div>
             
