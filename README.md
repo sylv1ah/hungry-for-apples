@@ -9,6 +9,8 @@ Deployed on Heroku [here!](https://hungry-for-apples.herokuapp.com/)
 I also made it a PWA ;)
 (add it to your homepage on your phone)
 
+Used a nice API from https://rickandmortyapi.com/documentation/
+
 ---
 
 ## 🛠 Built with:
