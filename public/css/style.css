@@ -29,6 +29,7 @@ a {
 h2 {
   font-family: 'Share Tech Mono', monospace;
   font-weight: normal;
+  text-align: center;
   text-shadow: 2px 2px 1px #000000;
 }
 
@@ -86,15 +87,13 @@ form {
 }
 
 .orb {
-  background-color: #8bcf21;
-  background-image: url('../assets/orb.png');
-  width: 150px;
-  height: 150px;
+  background-image: url(../assets/greenorb.png);
+  background-size: 228px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin: 40px;
-  -webkit-box-shadow: 0px 0px 23px 17px #18f8b4, 0px 0px 16px 19px #18f8b4 inset;
-  -moz-box-shadow: 0px 0px 23px 17px #18f8b4, 0px 0px 16px 19px #18f8b4 inset;
-  box-shadow: 0px 0px 23px 17px #18f8b4, 0px 0px 16px 19px #18f8b4 inset;
+  margin: 10px;
+  padding: 8px;
   animation: rotation 15s infinite linear;
 }
 
@@ -261,7 +260,10 @@ b {
   text-shadow: 0 0 10px #FFFFFF;
   user-select: none;
 }
-
+.search-query {
+  background-color: green;
+  font-size: 1.3em;
+}
 /* footer styling */
 
 .footer {
@@ -299,7 +301,6 @@ b {
   text-align: center;
   margin-top: 20px;
 }
-
 /* --------------------------------css for responsive desktop-------------------------------------- */
 
 @media only screen and (min-width: 768px) {

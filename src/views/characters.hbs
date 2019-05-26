@@ -1,9 +1,5 @@
 <div class="character-list-container">
-   <h2>searching for..."{{search}}"</h2>
-   <div id="user-search" class="user-search">
-       {{!-- user's search input will go here --}}
-       
-   </div>
+   <h2 class="search-header">you searched for...<br><span class="search-query">"{{search}}"</span></h2>
    
     <section class="outer-container">
         {{#each char}}
@@ -30,9 +26,7 @@
                     </li>
                 </ul>
             </div>
-            
         </div>
-        
    {{/each}}
     </section>
     <div class="search-again"><a href="/">search again!</a></div>

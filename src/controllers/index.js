@@ -40,13 +40,12 @@ router.get('/:character', (req, response) => {
                             const allEps = (result1.results).concat(result2.results);
                             const allEpsSorted = sortEpisodes(allEps);
                             // console.log("allEpsSorted>>>>>>>>>>",allEpsSorted)
-                            fs.writeFileSync('src/allEpisodes.json', JSON.stringify(allEpsSorted))
+                            fs.writeFileSync('src/model/allEpisodes.json', JSON.stringify(allEpsSorted))
                             response.render('characters', {char: res.results, search: req.url.split('/')[1], allEps: allEpsSorted})
                         }
                     })
                 }
             })
-            
         }
     })
 });

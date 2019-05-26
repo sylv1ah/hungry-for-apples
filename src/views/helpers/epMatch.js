@@ -1,4 +1,4 @@
-const allEps = require('../../allEpisodes.json');
+const allEps = require('../../model/allEpisodes.json');
 
 const epMatch = (str) => {
     const selectedEp = allEps.filter(eps => eps.url === str );
