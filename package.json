@@ -18,9 +18,9 @@
   },
   "homepage": "https://github.com/seabasshoang/hungry-for-apples#readme",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "env2": "^2.2.2",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "express-handlebars": "^3.0.2",
     "morgan": "^1.9.1",
     "node-fetch": "^2.5.0",
